@@ -18,7 +18,6 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
 
 gem 'cucumber-rails', :require => false
-gem 'capybara', '~>2.1.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -35,6 +34,16 @@ gem 'jbuilder', '~> 1.2'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'capybara', '~>2.1.0'
+  gem 'selenium-webdriver'
+end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
 end
 
 # Use ActiveModel has_secure_password

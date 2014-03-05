@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140302180849) do
+ActiveRecord::Schema.define(version: 20140302221811) do
 
   create_table "drinkers", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -30,5 +30,11 @@ ActiveRecord::Schema.define(version: 20140302180849) do
 
   add_index "drinkers", ["email"], name: "index_drinkers_on_email", unique: true
   add_index "drinkers", ["reset_password_token"], name: "index_drinkers_on_reset_password_token", unique: true
+
+  create_table "drinks", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

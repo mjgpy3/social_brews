@@ -1,4 +1,6 @@
 SocialBrews::Application.routes.draw do
+  resources :drinks
+
   devise_for :drinkers
   get "site/index"
   # The priority is based upon order of creation: first created -> highest priority.

@@ -13,4 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require bootstrap
+//= require angular.js
+//= require angular-resource.min.js
+//= require_tree ./angular/node_modules/lodash
+//= require_tree ./angular/node_modules/restangular
+//= require ./angular/app.coffee
+//= require_tree ./angular

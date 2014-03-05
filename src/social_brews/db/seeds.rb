@@ -6,4 +6,18 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-drinks = Drink.create([{ :name => "60 Minute IPA" }, { :name => "Midas Touch" }, { :name => "Sixty-One" }])
+drinks = Drink.create(
+  [
+    { :name => "60 Minute IPA" }, 
+    { :name => "Midas Touch" }, 
+    { :name => "Sixty-One" }
+  ])
+
+drinkers = Drinker.create(
+  [
+    {
+      :email => "foo@bar.com",
+      :password => "strongpass",
+      :password_confirmation => "strongpass"
+    }
+  ]);

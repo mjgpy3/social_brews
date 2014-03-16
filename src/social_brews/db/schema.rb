@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140302221811) do
+ActiveRecord::Schema.define(version: 20140316181229) do
+
+  create_table "breweries", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "drinkers", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -35,6 +41,7 @@ ActiveRecord::Schema.define(version: 20140302221811) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "brewery_id"
   end
 
 end
